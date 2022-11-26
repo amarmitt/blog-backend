@@ -1,0 +1,23 @@
+server:
+  port: 8081
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: blog_db
+# autoconfigure exclued statement is written we have Data-jpa and Mongodb deependency      
+#  autoconfigure:
+#    exclude:
+#    - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration        
+
+# logs
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb:
+            core:
+              MongoTemplate: Debug
